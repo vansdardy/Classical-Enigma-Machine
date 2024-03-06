@@ -14,6 +14,6 @@
 
 package main.model;
 
-public class Rotor implements Gadget {
+public class Rotor extends Gadget {
     
 }

@@ -12,6 +12,6 @@
 
 package main.model;
 
-public class Plugboard implements Gadget {
+public class Plugboard extends Gadget {
     
 }

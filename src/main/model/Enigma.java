@@ -15,8 +15,8 @@
  * 
  * The major flaw that led to the crack of the Enigma machine was that the input of an alphabet will never output itself.
  * That is: if the input is 'G', the encrypted message will never be 'G', it can be any other alphabet in the rest twenty-five.
- * Due to this design flaw, the German's habit of adding "Heil Hitler" at the end of a telegraph became the critical breakthrough
- * to crack a random intercepted encrypted message.
+ * Due to this design flaw, the Germans' habit of adding "Heil Hitler" at the end of a telegraph became the critical breakthrough
+ * to crack a randomly intercepted encrypted message.
  */
 
 package main.model;

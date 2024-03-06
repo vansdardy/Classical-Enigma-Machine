@@ -11,6 +11,6 @@
 
 package main.model;
 
-public class Reflector implements Gadget {
+public class Reflector extends Gadget {
     
 }
