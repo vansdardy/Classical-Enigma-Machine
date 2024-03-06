@@ -7,15 +7,13 @@ public abstract class Gadget {
 
     /**
      * Constructor for gadgets that use the default input/output
-     * Default input/output will always contain all 26 English alphabets.
+     * Default input/output will always contain all 26 English alphabets, capitalized.
      * @param None
      */
     public Gadget() {
         defaultIO = new HashSet<>();
         
-        char A = 'A';
-        char Z = 'Z';
-        for (char i = A; i <= Z; i += 1) {
+        for (char i = 'A'; i <= 'Z'; i += 1) {
             char alphabet = i;
             defaultIO.add(alphabet);
         }
