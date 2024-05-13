@@ -13,7 +13,30 @@
  */
 
 package main.model;
+import main.abstraction.Gadget;
+import main.abstraction.Observer;
 
-public class Rotor extends Gadget {
-    
+import java.util.*;
+
+public class Rotor implements Observer {
+    // A rotor needs the leftIO, rightIO, and a map for each
+    private List<Character> leftIO = new ArrayList<>();
+    private List<Character> rightIO = new ArrayList<>();
+    private Map<Character, Character> rightToLeft = new HashMap<>();
+    private Map<Character, Character> leftToRight = new HashMap<>();
+
+    public Rotor() {
+        Gadget gadget = Gadget.getGadget();
+        leftIO.addAll(gadget.getIO());
+        rightIO.addAll(gadget.getIO());
+    }
+
+    public void updateIO(Set<Character> newIO) {
+        leftIO.clear();
+        leftIO.addAll(newIO);
+        rightIO.clear();
+        rightIO.addAll(newIO);
+
+        // TODO: update maps
+    }
 }

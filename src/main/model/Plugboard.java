@@ -11,7 +11,24 @@
  */
 
 package main.model;
+import main.abstraction.Gadget;
+import main.abstraction.Observer;
 
-public class Plugboard extends Gadget {
-    
+import java.util.*;
+
+public class Plugboard implements Observer {
+    // The plugboard has the set of IO, and the cable connecting them in pairs.
+    private List<Character> io = new ArrayList<>();
+    private Map<Character, Character> cable = new HashMap<>();
+
+    public Plugboard() {
+        io.addAll(Gadget.getGadget().getIO());
+    }
+
+    public void updateIO(Set<Character> newIO) {
+        io.clear();
+        io.addAll(newIO);
+
+        // TODO: update cable
+    }
 }

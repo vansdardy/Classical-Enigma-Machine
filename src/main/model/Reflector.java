@@ -10,7 +10,24 @@
  */
 
 package main.model;
+import main.abstraction.Gadget;
+import main.abstraction.Observer;
 
-public class Reflector extends Gadget {
-    
+import java.util.*;
+
+public class Reflector implements Observer {
+    // TODO: fields
+    private List<Character> io = new ArrayList<>();
+    private Map<Character, Character> reflections = new HashMap<>();
+
+    public Reflector() {
+        io.addAll(Gadget.getGadget().getIO());
+    }
+
+    public void updateIO(Set<Character> newIO) {
+        io.clear();
+        io.addAll(newIO);
+
+        // TODO: update reflections
+    }
 }
